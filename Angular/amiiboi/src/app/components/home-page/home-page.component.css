@@ -1,0 +1,10 @@
+.p50{
+  padding: 50px!important
+}
+
+.hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, .2);
+}

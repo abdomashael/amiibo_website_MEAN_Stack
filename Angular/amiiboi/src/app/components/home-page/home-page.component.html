@@ -1,0 +1,80 @@
+<!--&lt;!&ndash; Page Layout here &ndash;&gt;-->
+<div class="row flex-xl-nowrap">
+
+  <div class="col-lg-4 col-md-4 col-xl-2  bg-dark shadow-lg p-0 ">
+    <!-- Grey navigation panel -->
+    <div class="col-12 mr-auto pl-3 mt-5 ">
+      <div class="col-12 justify-content-center align-items-center">
+        <figure class="col-12 p-0"><img
+          src="https://cdn2.f-cdn.com/contestentries/1316431/24595406/5ae8a3f2e4e98_thumb900.jpg"
+          class="rounded-circle col-12 " alt=""></figure>
+
+        <div class="col-12 text-center">
+          <a class="font-weight-bold text-primary" href="https://github.com/abdomashael">Abdo Mashael</a>
+        </div>
+        <p class="col-12 text-center text-white">Developer</p>
+      </div>
+    </div>
+    <hr class="hr"/>
+
+    <div class="col-12 row mr-auto text-center  pl-5 ">
+      <h6 class="text-center text-primary">Total Cards : </h6>
+      <p class="col-4 text-center text-white"> {{maxCardsCount}}</p>
+    </div>
+
+    <div class="col-12 row mr-auto text-center  pl-5 " *ngIf="searchResultCount > 0">
+      <h6 class="text-center text-primary">Search Cards : </h6>
+      <p class="col-4 text-center text-white"> {{searchResultCount}}</p>
+    </div>
+  </div>
+
+  <main class=" justify-content-center align-items-center">
+    <!-- Teal page content  -->
+
+    <div class="row d-flex justify-content-center mt-4 ">
+      <div class="col-lg-3 col-md-4 col-sm-1 mr-auto ml-lg-5" *ngFor="let card of pageData">
+        <div class="card p-2 mb-5 shadow" style="width: 18rem;">
+          <img src="{{card.image}}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title red-text ">{{card.name}}</h5>
+
+            <p class="card-text">I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+
+            <a href="#" class="card-link">This is a link</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+</div>
+<footer class="pb-2 pt-2 bg-primary ">
+  <ul class="pagination justify-content-center row">
+    <li class="page-item"><a class="page-link" (click)="previous()">Previous</a></li>
+    <li class="page-item " *ngFor="let item of fakeArray">
+      <ng-template
+        *ngIf="currentPageNo === item;then showBlock; else notShowBlock">
+      </ng-template>
+      <ng-template #showBlock>
+        <a class="page-link text-info" (click)="refresh(item)">{{item}}</a>
+      </ng-template>
+
+      <ng-template #notShowBlock>
+        <a class="page-link " (click)="refresh(item)">{{item}}</a>
+      </ng-template>
+
+      <!--        <a class="page-link text-info" (click)="refresh(item)">{{item}}</a>-->
+    </li>
+    <li class="page-item"><a class="page-link" (click)="next()">Next</a></li>
+    <span class="font-weight-bold  align-self-center pl-2"> Of {{maxPagesCount}}</span>
+
+  </ul>
+
+
+</footer>
+<!-- SideNav slide-out button -->
+<!-- SideNav slide-out button -->
