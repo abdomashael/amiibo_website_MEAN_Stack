@@ -2,10 +2,10 @@
 
 - Main Page
 
-![alt text](https://i.imgur.com/A0zRlGe.png)
+![alt text](https://i.imgur.com/GTdfWfI.png)
 
 ------------------------------------------------
 
 - Search Results
 
-![alt text](https://i.imgur.com/pxaH8IG.png)
+![alt text](https://i.imgur.com/bf3mFT3.png)

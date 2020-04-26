@@ -1,7 +1,7 @@
 const {Schema:mongooseSchema , model} = require("mongoose")
 
 let amiiboaSchema = new mongooseSchema({
-    amiiboaSeries:{type:String},
+    amiiboSeries:{type:String},
     character:{type:String},
     gameSeries:{type:String},
     head:{type:String},
