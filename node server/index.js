@@ -22,12 +22,14 @@ mongoose.connect("mongodb://localhost:27017/amiiboa", {
     })
     .then(() => {
         console.log("db is Conncted")
-        //externalLoad()
+        //to load data from https://www.amiiboapi.com/ api to mongo Database
+        externalLoad()
 
     })
     .catch(err => console.log(err))
 
 app.use((req, res,next) => {
+    //logger for all requests on server endpoints
     console.log(`${new Date()} ---- ${req.method} ---- ${req.url} `);
     
     next()

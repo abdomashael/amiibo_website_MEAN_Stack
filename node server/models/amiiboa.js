@@ -12,5 +12,7 @@ let amiiboaSchema = new mongooseSchema({
     type:{type:String},
 })
 
+amiiboaSchema.index({image:1,name:1,amiiboSeries:1,gameSeries:1,character:1},{unqiue: true});
+
 let AmiiboaModel = model('amiiboa',amiiboaSchema)
 module.exports = AmiiboaModel
